@@ -10,11 +10,6 @@ import (
 	. "github.com/yocover/global-toolkit/net/resty"
 )
 
-type bodyStruct struct {
-	Name string `json:"name"`
-	Age  int    `json:"age"`
-}
-
 // 编写测试方法
 func TestGetRequest(t *testing.T) {
 	ts := httptest.NewServer(http.HandlerFunc(func(w http.ResponseWriter, r *http.Request) {
